@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/new_project.css">
+    
+    <title>New Project</title>
+
+    <script type="text/javascript">
+    function pindah(){
+        window.location.href = "new_project_lanjut.html";
+        }
+    </script>
+</head>
+
+<body style="background-color: #B1D4E0;">
+    <h1 class="mt-4 mb-5 ml-5" id="workspace_font">WORKSPACE</h1>
+    <div class="container mt-5" id="kotak">
+        <h3 class="float-left mt-3 mx-2 px-1 ml-4">Project</h3>
+        <h5 class="float-right mt-3 mx-2 px-1 mr-4">Hello, Iskhak!<img src="../assets/images/user_icon.jpg"
+                alt="user_icon" class="rounded-circle" id="icon_size"></h5>
+        <br>
+        <div class="row mt-5 mb-5 mx-4">
+            <!-- gambar buat_proyek -->
+            <div class="col-md-6 mt-4">
+                <img src="../assets/images/buat_proyek _baru.jpg" class="img-fluid rounded-lg mx-auto d-block"
+                    alt="Gambar Buat Proyek Baru">
+            </div>
+            <div class="col-md-6">
+                <div class="container mt-4">
+                    <h5>Buat Proyek Baru</h5>
+                        <div class="row">
+                            <div class="col-8 pr-0">
+                                <!-- input judul proyek -->
+                                <input class="form-control rounded-pill mt-3 mb-3" type="text" placeholder="Judul Proyek">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8 py-2 mb-2 pr-0">
+                                <!-- input nama anggota -->
+                                <input class="form-control rounded-pill" type="text" placeholder="Anggota Tim">
+                            </div>
+                            <div class="col-2 py-2 mb-2 pl-1">
+                                <!-- gambar icon plus -->
+                                <button class="rounded-circle border-0"><img src="../assets/images/plus_icon.png" alt="plus_icon" id="icon_size_no_margin"></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10">
+                                <!-- Tampilkan nama anggota -->
+                                <p>Daftar Anggota</p>
+                                <p id="namaAnggota"># Muhamad Iskhak<img src="../assets/images/trash_icon.jpg" alt="trash_icon" id="icon_size"></p>
+                                <p id="namaAnggota"># Muhamad Iskhak<img src="../assets/images/trash_icon.jpg" alt="trash_icon" id="icon_size"></p>
+                                <p id="namaAnggota"># Muhamad Iskhak<img src="../assets/images/trash_icon.jpg" alt="trash_icon" id="icon_size"></p>
+                            </div>
+                        </div>
+                        <input type="button" class="btn btn-primary mt-5 mr- 3 py-2 px-4 float-right"
+                            value="Lanjut" id="tombol" onclick="pindah()">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
