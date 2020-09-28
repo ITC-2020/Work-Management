@@ -1,0 +1,27 @@
+#icon_size{
+    width: 1.3em;
+    height: 1.3em;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+#icon_size_no_margin{
+    width: 1.5em;
+    height: 1.8em;
+}
+#kotak{
+    background-color: #F9F9F9; 
+    border-color: #0C2D48; 
+    border: solid 1px;
+    border-radius: 3em;
+}
+#tombol{
+    background-color: #0C2D48;
+    font-family: Poppins,Arial, Helvetica, sans-serif;
+    border-radius: 3em;
+}
+#workspace_font{
+    font-family: Quicksand,heltevica;
+    text-decoration: underline;
+}
