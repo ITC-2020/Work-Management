@@ -6,24 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/new_project.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-    <title>Dashboard coba git</title>
+    <title>Dashboard</title>
 
 </head>
 
 <body style="background-color: #B1D4E0;">
     <h1 class="mt-4 mb-5 ml-5" id="workspace_font">WORKSPACE</h1>
-    <div class="container mt-5" id="kotak">
-        <h3 class="float-left mt-3 mx-2 px-1 ml-4">Project</h3>
-        <h5 class="float-right mt-3 mx-2 px-1 mr-4">Hello, Iskhak!<img src="../assets/images/user_icon.jpg"
-                alt="user_icon" class="rounded-circle" id="icon_size"></h5>
-        <br>
-        <div class="row mt-5 mb-5 mx-4">
-            <div class="col-md-3">
-                <img src="../assets/images/trash_icon.jpg" alt="user_icon" class="float-right mt-5" id="icon_size_no_margin">
-                <img src="../assets/images/user_icon.jpg" alt="user_icon" class="float-right" id="icon_size_no_margin">
+    <div class="container mt-5 pb-4" id="kotak">
+        <div id="navbar" class="container d-flex flex-row justify-content-between rounded-pill pt-3">
+            <h3 class="row ml-5">Proyek</h3>
+            <div class="row d-flex flex-row justify-content-around align-content-end">
+                <h6 class="mx-3">Semua</h6>
+                <h6 class="mx-3">Proses</h6>
+                <h6 class="mx-3">Selesai</h6>
+            </div>
+            <h5 class="row mr-4 align-content-end">Hello, Iskhak!<img src="../assets/images/user_icon.jpg" alt="user_icon"
+                    class="rounded-circle ml-2" id="icon_size"></h5>
+        </div>
+
+        <!-- input search -->
+        <div class="search container ml-5 mt-3 mb-3">
+            <div class="input-group bg-white input-group-sm rounded-pill border border-dark">
+                <div class="button input-group-append">
+                    <button class="btn ml-2 " type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <input class="cari form-control rounded-pill" type="search" placeholder="Cari" aria-label="Search">
             </div>
         </div>
+        
+        <!-- kotak" kecil -->
+        <div class="row mt-5 mb-5 mx-4">
+            <div class="col-md-3 rounded-lg mx-2 py-2" id="kotak_kecil">
+                <img src="../assets/images/pencil_icon.png" alt="pencil_icon" class="float-right" id="icon_size_no_margin">
+                <img src="../assets/images/trash_icon.png" alt="trash_icon" class="float-right mr-2" id="icon_size_no_margin">
+                <br>
+                <h4>Judul Proyek</h4>
+                <p>Keterangan</p>
+                <button class="float-left rounded-pill px-2">Sisa 3 Hari</button>
+                <img src="../assets/images/user_icon.jpg" alt="user_icon" class="rounded-circle float-right" style="width: 1.4em; height: 1.5em;">
+            </div>
+        </div>
+            
+        <div class="d-flex align-items-end flex-column">
+            <button class="btn btn-primary" id="tombol" type="button">Proyek Baru</button>
+        </div>
+
     </div>
 </body>
 
