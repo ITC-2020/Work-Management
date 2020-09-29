@@ -47,7 +47,7 @@
                 <div class="container">
                 <h5>Buat Proyek Baru</h5>
                 <!-- Form buat Proyek -->
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="" method="post" enctype="multipart/form-data" onsubmit="check()">
                     <div class="row">
                         <div class="col-8">
                             <!-- input deskripsi -->
@@ -64,7 +64,7 @@
                         <div class="col-8">
                             <div class="custom-file">
                                 <!-- input file -->
-                                <input type="file" class="custom-file-input rounded-lg" name="file">
+                                <input type="file" class="custom-file-input rounded-lg" name="file" id="fil">
                                 <label class="custom-file-label" for="labelBrowse">Unggah Document</label>
                             </div>
                         </div>
