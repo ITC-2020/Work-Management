@@ -1,15 +1,40 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+
+body{
+    font-family: Quicksand,heltevica;
+    font-weight: 900;
+    background-color: #B1D4E0 ;
+    color: #0C2D48;
+}
+
+#isi{
+    background-color: #F9F9F9;
+    border: 2px solid #0C2D48;
+}
+
+#navbar h3,h6,h5{
+    font-family: Quicksand,heltevica;
+    font-weight: 600;
+}
+
 #icon_size{
     width: 1.3em;
     height: 1.3em;
-    margin-left: 4px;
-    margin-right: 4px;
-    margin-bottom: 4px;
-    margin-top: 4px;
 }
 #icon_size_no_margin{
     width: 1.5em;
     height: 1.8em;
 }
+.search{
+    width: 25%;
+}
+
+.cari{
+    border: none;
+}
+
 #kotak{
     background-color: #F9F9F9; 
     border-color: #0C2D48; 
@@ -23,5 +48,6 @@
 }
 #workspace_font{
     font-family: Quicksand,heltevica;
+    font-weight: bolder;
     text-decoration: underline;
 }
