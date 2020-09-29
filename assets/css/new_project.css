@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 
+a{
+    color: #000000;
+}
+
 body{
     font-family: Quicksand,heltevica;
     font-weight: 900;
