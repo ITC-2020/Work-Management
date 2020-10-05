@@ -1,8 +1,14 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 
 a{
     color: #000000;
 }
+
 
 body{
     font-family: Quicksand,heltevica;
@@ -11,22 +17,28 @@ body{
     color: #0C2D48;
 }
 
+
+#isi{
+    background-color: #F9F9F9;
+    border: 2px solid #0C2D48;
+}
+
+
 #navbar h3,h6,h5{
     font-family: Quicksand,heltevica;
     font-weight: 600;
 }
 
+
+
 .cari{
     border: none;
 }
 
+
 #icon_size{
     width: 1.3em;
     height: 1.3em;
-    margin-left: 4px;
-    margin-right: 4px;
-    margin-bottom: 4px;
-    margin-top: 4px;
 }
 
 #icon_size_no_margin{
@@ -38,6 +50,15 @@ body{
     background-color: #F9F9F9;
     border: 2px solid #0C2D48;
 }
+
+.search{
+    width: 25%;
+}
+
+.cari{
+    border: none;
+}
+
 
 #kotak{
     background-color: #F9F9F9; 

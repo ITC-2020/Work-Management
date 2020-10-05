@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+
+* {
+    padding:0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#main_content{
+    display:flex;
+    flex-direction:row;
+}
+
+.name{
+    color: #0C2D48;
+    font-weight: bolder;
+    position: absolute;
+    font-size: 50px;
+    bottom: 20%;
+    left: 15%;
+}
+
+#formlogin{
+    color:#384047;
+    height: 90vh;
+}
+
+.headline{
+    font-weight: bolder;
+}
+
+.image{
+    width: 100%;
+    height: 100vh;
+}
+
+form{
+    width: 65%;
+    font-weight:bold;
+}
+
+.radius.form-control{
+    border-radius:15px;
+}
+
+.mata{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    cursor: pointer;
+}
+
+.eye{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+}
+
+#button-action{
+    background-color: #0C2D48;
+    color: cornsilk;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 1px;
+}
+
+
+span{
+    color: #4781B7;
+}
+
+@media screen and (max-width: 920px){
+    form{
+        width: 85%;
+    }
+    .name{
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    form{
+        width: 90%;
+    }
+    .name{
+        left: 7%;
+        font-size: 45px;
+    }
+  
+}
+
+@media screen and (max-width: 670px){
+    body{
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    #main_content{
+        display:flex;
+        flex-direction: column;
+    }
+    form{
+        width: 88%;
+    }
+    .name{
+        position: relative;
+        color: white;
+        padding: 5px;
+    }
+    .responsif{
+        background-color:#0C2D48;
+        width: 100%;
+        margin: 0;
+    }
+    .image{
+        display: none;
+    }
+    #formlogin{
+        height: 90vh;
+        box-sizing: border-box;
+        padding-bottom: 80px;
+    }
+
+  
+}
+
