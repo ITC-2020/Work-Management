@@ -1,5 +1,13 @@
 
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+a{
+    color: #000000;
+}
 
 
 body{
@@ -9,24 +17,40 @@ body{
     color: #0C2D48;
 }
 
+
 #isi{
     background-color: #F9F9F9;
     border: 2px solid #0C2D48;
 }
+
 
 #navbar h3,h6,h5{
     font-family: Quicksand,heltevica;
     font-weight: 600;
 }
 
+
+
+.cari{
+    border: none;
+}
+
+
 #icon_size{
     width: 1.3em;
     height: 1.3em;
 }
+
 #icon_size_no_margin{
-    width: 1.5em;
-    height: 1.8em;
+    width: 1.2em;
+    height: 1.4em;
 }
+
+#isi{
+    background-color: #F9F9F9;
+    border: 2px solid #0C2D48;
+}
+
 .search{
     width: 25%;
 }
@@ -35,17 +59,28 @@ body{
     border: none;
 }
 
+
 #kotak{
     background-color: #F9F9F9; 
     border-color: #0C2D48; 
     border: solid 1px;
     border-radius: 3em;
 }
+
+#kotak_kecil{
+    background-color: #C0C0C0;
+}
+
+.search{
+    width: 25%;
+}
+
 #tombol{
     background-color: #0C2D48;
     font-family: Poppins,Arial, Helvetica, sans-serif;
     border-radius: 3em;
 }
+
 #workspace_font{
     font-family: Quicksand,heltevica;
     font-weight: bolder;

@@ -6,14 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/new_project.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     
     <title>New Project</title>
 
-    <script type="text/javascript">
-    function pindah(){
-        window.location.href = "new_project_lanjut.html";
-        }
-    </script>
 </head>
 
 <body style="background-color: #B1D4E0;">
@@ -32,6 +29,7 @@
             <div class="col-md-6">
                 <div class="container mt-4">
                     <h5>Buat Proyek Baru</h5>
+                    <form action="new_project_lanjut.html" method="">
                         <div class="row">
                             <div class="col-8 pr-0">
                                 <!-- input judul proyek -->
@@ -43,22 +41,23 @@
                                 <!-- input nama anggota -->
                                 <input class="form-control rounded-pill" type="text" placeholder="Anggota Tim">
                             </div>
-                            <div class="col-2 py-2 mb-2 pl-1">
+                            <div class="col-2 py-2 mt-2 pl-1">
                                 <!-- gambar icon plus -->
-                                <button class="rounded-circle border-0"><img src="../assets/images/plus_icon.png" alt="plus_icon" id="icon_size_no_margin"></button>
+                                <a href="#"><i class="fa fa-plus-circle fa-lg"></i></a>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-10">
                                 <!-- Tampilkan nama anggota -->
                                 <p>Daftar Anggota</p>
-                                <p id="namaAnggota"># Muhamad Iskhak<img src="../assets/images/trash_icon.jpg" alt="trash_icon" id="icon_size"></p>
-                                <p id="namaAnggota"># Muhamad Iskhak<img src="../assets/images/trash_icon.jpg" alt="trash_icon" id="icon_size"></p>
-                                <p id="namaAnggota"># Muhamad Iskhak<img src="../assets/images/trash_icon.jpg" alt="trash_icon" id="icon_size"></p>
+                                <p id="namaAnggota"># Muhamad Iskhak <a href=""><i class="fas fa-trash"></i></a></p>
+                                <p id="namaAnggota"># Muhamad Iskhak <a href=""><i class="fas fa-trash"></i></a></p>
+                                <p id="namaAnggota"># Muhamad Iskhak <a href=""><i class="fas fa-trash"></i></a></p>
                             </div>
                         </div>
-                        <input type="button" class="btn btn-primary mt-5 mr- 3 py-2 px-4 float-right"
-                            value="Lanjut" id="tombol" onclick="pindah()">
+                        <input type="submit" class="btn btn-primary mt-5 mr- 3 py-2 px-4 float-right"
+                            value="Lanjut" id="tombol">
+                        </form>
                 </div>
             </div>
         </div>
