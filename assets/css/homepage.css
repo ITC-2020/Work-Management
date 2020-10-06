@@ -1,0 +1,241 @@
+/* utilities */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f9f9f9;
+}
+span{
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: underline;
+}
+.btn-outline-dark{
+    border-color: #0C2D48;
+    border-radius: 5px;
+}
+.btn-outline-dark:hover{
+    background-color: #0C2D48;
+}
+.btn-dark{
+    background-color: #0C2D48;
+    transition: all 0.2s;
+}
+.btn-dark:hover{
+    background-color: #061522;
+    transform: scale(1.05);
+}
+h1{
+    font-size: 40px;
+}
+h1 span:hover{
+    text-decoration: none;
+    color: #1a588a !important;
+    cursor: default;
+}
+
+
+
+/* Navbar */
+.navbar{
+    background-color: #b1d4e0 !important;
+}
+.navbar-brand{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #0C2D48;
+    font-size: 22px;
+}
+.navbar-nav{
+    margin-left: auto;
+}
+.navbar-nav .btn{
+    padding: 2px 25px;
+}
+.navbar-nav .nav-link{
+    margin-right: 20px;
+}
+.navbar-nav .nav-link:hover{
+    background-color: #0c2d481e;
+    border-radius: 5px;
+}
+
+
+
+
+.section{
+    margin-top: 140px;
+}
+.section .section-2, .section .section-1{
+    display: flex;
+    text-align: center;
+}
+
+/* Hero Section */
+.section1 .section-1{
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+
+.section1 .section-1 h1 span{
+    font-weight: bold;
+    color: #0C2D48;
+}
+.section1 .section-1 p{
+    opacity: 0.6;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.section1 .section-1 a{
+    align-self: center;
+    width: 150px;
+    height: 40px;
+}
+.img-section{
+    width: auto;
+    min-width: 100%;
+}
+.img-pertama{
+    object-fit: contain;
+    margin-top: -100px;
+}
+
+
+/* Second Section */
+.section2{
+    margin-top: 100px;
+}
+
+.section2 .section-1{
+    width: 400px;
+    height: 429px;
+    margin-bottom: 40px;
+}
+.section2 .section-2{
+    flex-direction: column;
+    text-align: left;
+}
+
+.section2 .section-2 h1{
+    align-self: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.section2 .section-2 h1 span{
+    font-weight: bold;
+    color: #0C2D48;
+}
+
+.section2 .section-2 ul{
+    align-self: center;
+}
+.section2 .section-2 ul li{
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+
+/* Third Section */
+.benefit-section h1{
+    text-align: center;
+    margin-top: 50px;
+}
+.benefit-section h1 span{
+    font-weight: bold;
+    color: #0C2D48;
+}
+.benefit{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+.benefit-part{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+}
+.benefit-part h2{
+    margin-top: 40px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.benefit-part p{
+    font-size: 16px;
+    opacity: 0.7;
+    margin-bottom: 60px;
+}
+.img-benefit{
+    align-self: center;
+    width: 200px;
+    height: 200px;
+}
+.benefit-part:hover .img-benefit, .benefit-part:hover h2{
+    transform: scale(1.05);
+    color: #1a588a;
+}
+
+
+/* Footer */
+footer{
+    background-color: #b1d4e0;
+    margin-top: 50px;
+}
+footer .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+footer .container .footer-kanan{
+    text-align: right;
+}
+footer .container .footer-kanan p:nth-of-type(1), footer .container .footer-kiri p{
+    font-size: 14px;
+    opacity: 0.7;
+}
+footer .container .footer-kanan p:nth-of-type(2){
+    font-weight: bold;
+    color: #0C2D48;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+footer .container .footer-kiri .footer-kiri-sub a .iconify{
+    font-size: 22px;
+    color: #0C2D48;
+    margin-right: 20px;
+    transition: ease 0.2s;
+}
+footer .container .footer-kiri .footer-kiri-sub a .iconify:hover{
+    transform: scale(1.1);
+    color: #1a588a;
+}
+
+
+
+
+@media only screen and (max-width: 992px){
+    .benefit{
+        flex-direction: column;
+    }
+    .benefit-part{
+        width: 100%;
+    }
+
+@media only screen and (max-width: 767px){
+    .img-pertama{
+        margin-top: -450px;
+        z-index: -1;
+        opacity: 0.18;
+    }
+}
