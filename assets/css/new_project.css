@@ -3,8 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
-
 a{
     color: #000000;
 }
@@ -65,10 +63,6 @@ body{
     border-color: #0C2D48; 
     border: solid 1px;
     border-radius: 3em;
-}
-
-#kotak_kecil{
-    background-color: #C0C0C0;
 }
 
 .search{
