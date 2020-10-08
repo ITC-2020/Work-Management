@@ -64,8 +64,8 @@
                         <div class="col-8">
                             <div class="custom-file">
                                 <!-- input file -->
-                                <input type="file" class="custom-file-input rounded-lg" name="file" id="fil">
-                                <label class="custom-file-label" for="labelBrowse">Unggah Document</label>
+                                <input type="file" class="custom-file-input " name="file" id="file">
+                                <label class="custom-file-label" for="file">Unggah Document</label>
                             </div>
                         </div>
                     </div>
@@ -75,5 +75,13 @@
             </div>
         </div>
     </div>
+
+    <!-- js for upload input file label -->
+    <script type="application/javascript">
+        $('input[type="file"]').change(function (e) {
+            var fileName = e.target.files[0].name;
+            $('.custom-file-label').html(fileName);
+        });
+    </script>
 </body>
 </html>
