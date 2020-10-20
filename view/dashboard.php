@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    if (!isset($_SESSION['nama'])){
+        header("Location: login.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +23,10 @@
 </head>
 
 <body>
-    <h1 class="mt-4 mb-5 ml-5" id="workspace_font">WORKSPACE</h1>
+    <div class="container mt-5" style="display: flex; justify-content: space-between;">
+        <h1 id="workspace_font">WORKSPACE</h1>
+        <a class="btn btn-danger" href="../config/action-logout.php" style="height: 40px;">Logout</a>
+    </div>
     <div class="container mt-5 pb-4" id="kotak">
         <nav class="navbar navbar-expand-lg mt-2 mx-2">
             <a class="navbar-brand" href="#">Projek</a>
@@ -30,7 +40,15 @@
                     <a class="nav-item nav-link" href="#">Proses</a>
                     <a class="nav-item nav-link" href="#">Selesai</a>
                 </div>
-                <h5>Hello, Iskhak!<i class="fas fa-user ml-2"></i></h5>
+                <h5>Hello, <?php
+
+                // Tampilin Nama Depan
+                // $nama = explode(" ", $_SESSION['nama']);
+                // echo $nama[0];
+
+                // Tampilin nama full
+                echo $_SESSION['nama'];
+                ?> !<i class="fas fa-user ml-2"></i></h5>
             </div>
         </nav>
 

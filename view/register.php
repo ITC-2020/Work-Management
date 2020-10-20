@@ -10,6 +10,16 @@
     <title>Register</title>
 </head>
 <body>
+    <?php 
+    //cek status yang dikirimkan file action
+    if(isset($_GET['status'])){
+        if($_GET['status'] == "failed"){
+            echo '<script>
+            alert("Nama dan Email sudah ada, silahkan menggunakan lainnya!");
+            </script>';
+        }
+    }
+    ?>
     <div id="main_content" class="container-fluid justify-content-between p-0">
         <!--container-left-->
         <div class="responsif container-fluid p-0">
@@ -29,18 +39,18 @@
 
             <!--form-->
             <div class="container d-flex justify-content-center align-content-center mb-n5">
-                <form>
+                <form action="../config/action-register.php" method="POST">
                     <!--Nama-->
                     <div class="form-group">
                         <label class="pl-3" for="exampleInputname1">Nama :</label>
-                        <input type="email" class="radius form-control p-4" id="exampleInputName1" placeholder="Masukkan nama">
+                        <input type="text" class="radius form-control p-4" id="exampleInputName1" placeholder="Masukkan nama" name="nama" required>
                         </div>
                     <!--Nama-end-->
 
                     <!--Email-->
                     <div class="form-group">
                     <label class="pl-3" for="exampleInputEmail1">Alamat Email :</label>
-                    <input type="email" class="radius form-control p-4" id="exampleInputEmail1" placeholder="Masukkan alamat email">
+                    <input type="email" class="radius form-control p-4" id="exampleInputEmail1" placeholder="Masukkan alamat email" name="email" required>
                     </div>
                     <!--Email-end-->
 
@@ -48,7 +58,7 @@
                     <div class="form-group">
                         <label class="pl-3" for="exampleInputPassword1">Kata Sandi</label>
                         <div class="mata">
-                            <input type="password" class="radius form-control p-4" id="exampleInputPassword1" placeholder="Enter your password">               
+                            <input type="password" class="radius form-control p-4" id="exampleInputPassword1" placeholder="Enter your password" name="password" required>               
                             <div class="eye">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                             </div>
@@ -69,7 +79,7 @@
             <!--form-end-->
 
             <div class="row mt-5"></div>
-                <h6 class="mx-auto mt-4 mb-4">Sudah punya akun? <span><a href="/view/login.html">Yuk masuk.</a></span></h6>
+                <h6 class="mx-auto mt-4 mb-4">Sudah punya akun? <span><a href="login.php">Yuk masuk.</a></span></h6>
         </div>
         <!--container-right-end-->
 
