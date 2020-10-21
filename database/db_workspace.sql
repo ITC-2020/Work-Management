@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2020 at 03:11 PM
+-- Generation Time: Oct 20, 2020 at 05:09 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -24,12 +24,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `db_pivot`
+--
+
+CREATE TABLE `db_pivot` (
+  `id_pivot` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `id_proyek` int(11) NOT NULL,
+  `posisi` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `db_proyek`
 --
 
 CREATE TABLE `db_proyek` (
   `id_proyek` int(11) NOT NULL,
-  `id_user` int(11) NOT NULL,
   `judul` varchar(100) NOT NULL,
   `deskripsi` varchar(200) NOT NULL,
   `tanggal_deadline` datetime NOT NULL,
@@ -41,8 +53,8 @@ CREATE TABLE `db_proyek` (
 -- Dumping data for table `db_proyek`
 --
 
-INSERT INTO `db_proyek` (`id_proyek`, `id_user`, `judul`, `deskripsi`, `tanggal_deadline`, `dokumen`, `status`) VALUES
-(4, 3, 'mateatika diskrit', 'tugas 2', '2020-10-23 23:59:55', 'ghha', 0);
+INSERT INTO `db_proyek` (`id_proyek`, `judul`, `deskripsi`, `tanggal_deadline`, `dokumen`, `status`) VALUES
+(5, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0);
 
 -- --------------------------------------------------------
 
@@ -70,11 +82,18 @@ INSERT INTO `db_user` (`id_user`, `nama_user`, `email_user`, `password`) VALUES
 --
 
 --
+-- Indexes for table `db_pivot`
+--
+ALTER TABLE `db_pivot`
+  ADD PRIMARY KEY (`id_pivot`),
+  ADD KEY `id_user` (`id_user`),
+  ADD KEY `id_proyek` (`id_proyek`);
+
+--
 -- Indexes for table `db_proyek`
 --
 ALTER TABLE `db_proyek`
-  ADD PRIMARY KEY (`id_proyek`),
-  ADD KEY `id_user` (`id_user`);
+  ADD PRIMARY KEY (`id_proyek`);
 
 --
 -- Indexes for table `db_user`
@@ -87,10 +106,16 @@ ALTER TABLE `db_user`
 --
 
 --
+-- AUTO_INCREMENT for table `db_pivot`
+--
+ALTER TABLE `db_pivot`
+  MODIFY `id_pivot` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `db_proyek`
 --
 ALTER TABLE `db_proyek`
-  MODIFY `id_proyek` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_proyek` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `db_user`
@@ -103,11 +128,11 @@ ALTER TABLE `db_user`
 --
 
 --
--- Constraints for table `db_proyek`
+-- Constraints for table `db_pivot`
 --
-ALTER TABLE `db_proyek`
-  ADD CONSTRAINT `fkid_user` FOREIGN KEY (`id_user`) REFERENCES `db_user` (`id_user`),
-  ADD CONSTRAINT `id_user` FOREIGN KEY (`id_user`) REFERENCES `db_user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `db_pivot`
+  ADD CONSTRAINT `db_pivot_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `db_user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `db_pivot_ibfk_2` FOREIGN KEY (`id_proyek`) REFERENCES `db_proyek` (`id_proyek`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
