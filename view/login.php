@@ -10,6 +10,17 @@
     <title>Login</title>
 </head>
 <body>
+    <?php 
+
+    //Cek status yang dikirimkan file action
+    if(isset($_GET['status'])){
+        if($_GET['status'] == "login"){
+            echo '<script>
+            alert("Silahkan login dengan akun yang telah dibuat.");
+            </script>';
+        }
+    }
+    ?>
     <div id="main_content" class="container-fluid justify-content-between p-0">
         <!--container-left-->
         <div class="responsif container-fluid p-0 justify-content-center">
@@ -30,15 +41,15 @@
 
             <!--form-->
             <div class="container d-flex justify-content-center align-content-center mb-n5">
-                <form>
+                <form action="../config/action-login.php" method="POST">
                     <div class="form-group">
                     <label class="pl-3" for="exampleInputEmail1">Alamat Email :</label>
-                    <input type="email" class="radius form-control p-4" id="exampleInputEmail1" placeholder="Masukkan alamat email">
+                    <input type="email" class="radius form-control p-4" id="exampleInputEmail1" placeholder="Masukkan alamat email" name="email" required>
                     </div>
                     <div class="form-group">
                         <label class="pl-3" for="exampleInputPassword1">Kata Sandi</label>
                         <div class="mata">
-                            <input type="password" class="radius form-control p-4" id="exampleInputPassword1" placeholder="Enter your password">               
+                            <input type="password" class="radius form-control p-4" id="exampleInputPassword1" placeholder="Enter your password" name="password" required>               
                             <div class="eye">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                             </div>
@@ -55,7 +66,7 @@
             <!--form-end-->
 
             <div class="row mt-5"></div>
-                <h6 class="mx-auto">Belum punya akun? <span><a href="/view/register.html">Daftar Sekarang</a></span></h6>
+                <h6 class="mx-auto">Belum punya akun? <span><a href="register.php">Daftar Sekarang</a></span></h6>
         </div>
         <!--container-right-end-->
 
