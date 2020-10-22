@@ -2,7 +2,7 @@
 	
 	//Detail Database
 	$db_server = "localhost"; // Nama servernya
-	$db_name = "workspace";	//nama databasenya
+	$db_name = "db_workspace";	//nama databasenya
 	$db_username ="root"; //username database
 	$db_pass = ""; //password database
 

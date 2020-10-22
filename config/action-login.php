@@ -19,11 +19,13 @@
 
     //mengambil value dari array result dengan key "nama_lengkap"
     $nama = $result["nama_lengkap"];
+    $id = $result["id"];
 
     //cek apakah email dan pass yg diinput valid
     if($email == $result["alamat_email"] && $password == $result["password"]){
     	session_start();
         $_SESSION['nama'] = $nama;
+        $_SESSION['id_user'] = $id;
         header("Location: ../view/dashboard.php");
     }
     else{
