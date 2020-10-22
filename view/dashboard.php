@@ -1,9 +1,9 @@
 <?php 
-    session_start();
-    if (!isset($_SESSION['nama'])){
-        header("Location: login.php");
-    }
-?>
+   session_start();
+   if (!isset($_SESSION['nama'])){
+       header("Location: login.php");
+   }
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +27,7 @@
         <h1 id="workspace_font">WORKSPACE</h1>
         <a class="btn btn-danger" href="../config/action-logout.php" style="height: 40px;">Logout</a>
     </div>
-    <div class="container mt-5 pb-4" id="kotak">
+    <div class="container mt-5 pb-4 mb-3" id="kotak">
         <nav class="navbar navbar-expand-lg mt-2 mx-2">
             <a class="navbar-brand" href="#">Projek</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -66,22 +66,38 @@
             </div>
         </div>
 
+        <!-- baris untuk kotak" kecil -->
+        <div class="row mt-5 mb-5 mx-4" >
+        <?php 
+            //memanggil file koneksi
+            require_once ("../config/koneksi.php");
+
+            //mencari data yang project dari database
+            $id = $_SESSION['id_user'];
+            $cek_data_query = "SELECT * FROM data_project WHERE id_project='$id'";
+            $data = mysqli_query($conn, $cek_data_query) or die (mysqli_error($conn));
+
+            //menampilkan data project
+            while($result = mysqli_fetch_assoc($data))
+            {
+        ?>
         <!-- kotak" kecil -->
-        <div class="row mt-5 mb-5 mx-4">
             <div class="col-md-3 rounded-lg mx-2 py-2 shadow bg-white rounded" id="kotak_kecil">
-                <a href=""><i class="fas fa-edit  float-right"></i></a>
-                <a href=""><i class="fas fa-trash float-right mr-3"></i></a>
+                <a href="edit_project.php?id_project=<?= $result['id_project'] ?>"><i class="fas fa-edit  float-right"></i></a>
+                <a href="lihat_project.php?id_project=<?= $result['id_project'] ?>"><i class="fas fa-eye  float-right mr-2"></i></a>
+                <a href=""><i class="fas fa-trash float-right mr-2"></i></a>
                 <br>
-                <h4>Judul Proyek</h4>
-                <p>Keterangan</p>
-                <button class="float-left rounded-pill px-2">Sisa 3 Hari</button>
+                <h4 ><?= $result['title'] ?></h4>
+                <p ><?= $result['description'] ?></p>
+                <button class="float-left rounded-pill px-2"><?= $result['deadline'] ?></button>
                 <i class="fas fa-user bg-white float-right"></i>
             </div>
+        <?php } ?>
         </div>
+        
 
         <div class="d-flex align-items-end flex-column">
-            <a href="new_project.html"><button class="btn btn-primary" id="tombol" type="button">Proyek
-                    Baru</button></a>
+            <a href="new_project.php"><button class="btn btn-primary" id="tombol" type="button">Proyek Baru</button></a>
         </div>
 
     </div>

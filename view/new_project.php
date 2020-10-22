@@ -38,30 +38,51 @@
         <h5 class="float-right mt-3 mx-2 px-1 mr-4">Hello, Iskhak!<i class="fas fa-user ml-1"></i></h5>
         <br>
         <div class="row mt-5 mb-5 mx-4">
-            <!-- gambar buat_proyek -->
-            <div class="col-md-6 mt-4">
-                <img src="../assets/images/buat_proyek _baru.jpg" class="img-fluid rounded-lg mx-auto d-block"
-                    alt="Gambar Buat Proyek Baru">
+            <div class="col-md-6">
+                    <h5>Buat Proyek Baru</h5>
+                    <form action="action-buatproject.php" method="">
+                        <div class="row">
+                            <div class="col-9 pr-0">
+                                <!-- input judul proyek -->
+                                <input class="form-control rounded-lg mt-3 mb-3" type="text" placeholder="Judul Proyek">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-9 py-2 mb-2 pr-0">
+                                <!-- input nama anggota -->
+                                <input class="form-control rounded-lg" type="text" placeholder="Anggota Tim">
+                            </div>
+                            <div class="col-2 py-2 mt-2 pl-1">
+                                <!-- gambar icon plus -->
+                                <a href="#"><i class="fa fa-plus-circle fa-lg"></i></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10">
+                                <!-- Tampilkan nama anggota -->
+                                <p>Daftar Anggota</p>
+                                <p id="namaAnggota"># Muhamad Iskhak <a href=""><i class="fas fa-trash"></i></a></p>
+                                <p id="namaAnggota"># Muhamad Iskhak <a href=""><i class="fas fa-trash"></i></a></p>
+                                <p id="namaAnggota"># Muhamad Iskhak <a href=""><i class="fas fa-trash"></i></a></p>
+                            </div>
+                        </div>
             </div>
+
             <div class="col-md-6 mt-4">
-                <div class="container">
-                <h5>Buat Proyek Baru</h5>
-                <!-- Form buat Proyek -->
-                <form action="#" method="post" enctype="multipart/form-data">
                     <div class="row">
-                        <div class="col-8">
+                        <div class="col-10">
                             <!-- input deskripsi -->
-                            <textarea name="des_proyek" id="" rows="5" class="form-control mb-2 mt-2 rounded-lg" placeholder="Deskripsi Proyek"></textarea>
+                            <textarea name="des_proyek" id="" rows="3" class="form-control mb-2 mt-2 rounded-lg" placeholder="Deskripsi Proyek"></textarea>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-8 py-2 mb-2">
+                        <div class="col-10 py-2 mb-2">
                             <!-- input tanggal -->
                             <input type="text" class="form-control rounded-lg" id="date" placeholder="YYYY-MM-DD" name="">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-8">
+                        <div class="col-10">
                             <div class="custom-file">
                                 <!-- input file -->
                                 <input type="file" class="custom-file-input " name="file" id="file">
@@ -70,8 +91,7 @@
                         </div>
                     </div>
                     <input type="submit" class="btn btn-primary mt-5 mr- 3 pt-2 pr-3 float-right" value="Buat Proyek" id="tombol">
-                </form>
-                </div>
+                    </form>
             </div>
         </div>
     </div>
