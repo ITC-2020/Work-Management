@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2020 at 06:48 AM
+-- Generation Time: Nov 11, 2020 at 04:14 PM
 -- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- PHP Version: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -43,7 +43,10 @@ CREATE TABLE `data_project` (
 --
 
 INSERT INTO `data_project` (`id_project`, `title`, `description`, `deadline`, `status`, `file`, `team`, `id_user`) VALUES
-(1, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-11-06', 'ongoing', 'draf kegiatan.txt', '1,2', 1);
+(1, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-11-06', 'ongoing', 'draf kegiatan.txt', '1,2', 1),
+(14, 'sisdig', 'tugas 4', '2020-01-19', 'ongoing', 'light academia _ Tumblr.png', '', 3),
+(20, 'strukdat', 'blablabla', '2020-01-11', 'ongoing', 'download.png', '', 3),
+(23, 'sisdig', 'blablabla', '2020-01-19', 'ongoing', 'download.png', '', 3);
 
 -- --------------------------------------------------------
 
@@ -64,7 +67,8 @@ CREATE TABLE `data_user` (
 
 INSERT INTO `data_user` (`id`, `nama_lengkap`, `alamat_email`, `password`) VALUES
 (1, 'ilham', 'ilhamhehe@gmail.com', '6590cb8139924b29d689133b86986f72'),
-(2, 'muhamad iskhak', 'iskhakmuh@gmail.com', '6590cb8139924b29d689133b86986f72');
+(2, 'muhamad iskhak', 'iskhakmuh@gmail.com', '6590cb8139924b29d689133b86986f72'),
+(3, 'gisa', 'gisanimr1010@gmail.com', '20b5228e7c555c54c7f0991828f0752c');
 
 -- --------------------------------------------------------
 
@@ -122,6 +126,18 @@ INSERT INTO `db_user` (`id_user`, `nama_user`, `email_user`, `password`) VALUES
 (1, 'arif pribadi', 'arifarif@gmail.com', 'arifpribadi16'),
 (3, 'gisani', 'gisanimr1010@gmail.com', 'gisanimrah');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_project`
+--
+
+CREATE TABLE `user_project` (
+  `id` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `id_project` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Indexes for dumped tables
 --
@@ -159,6 +175,12 @@ ALTER TABLE `db_user`
   ADD PRIMARY KEY (`id_user`);
 
 --
+-- Indexes for table `user_project`
+--
+ALTER TABLE `user_project`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -166,13 +188,13 @@ ALTER TABLE `db_user`
 -- AUTO_INCREMENT for table `data_project`
 --
 ALTER TABLE `data_project`
-  MODIFY `id_project` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_project` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `data_user`
 --
 ALTER TABLE `data_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `db_pivot`
@@ -191,6 +213,12 @@ ALTER TABLE `db_proyek`
 --
 ALTER TABLE `db_user`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `user_project`
+--
+ALTER TABLE `user_project`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
