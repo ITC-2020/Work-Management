@@ -4,7 +4,7 @@
     //memanggil file koneksi
     require_once ("../config/koneksi.php");
 
-    $teman=$_SESSION["teman"];
+    $teman=$_POST["teman"];
 
     //mencari data yang sama dari database
     $cek_data_query = "SELECT * FROM data_user WHERE alamat_email='$teman'";
