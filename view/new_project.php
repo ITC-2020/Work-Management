@@ -65,20 +65,20 @@
                         <div class="row">
                             <div class="col-9 py-2 mb-2 pr-0">
                                 <!-- input nama anggota -->
-                                <input class="form-control rounded-lg" type="text" placeholder="Anggota Tim" name="teman">
+                                <input class="form-control rounded-lg" id="keyword" type="text" placeholder="Anggota Tim" name="teman">
                             </div>
                             <div class="col-2 py-2 mt-2 pl-1">
                                 <!-- gambar icon plus -->
-                                <a href="cariteman.php"><i class="fa fa-plus-circle fa-lg"></i></a>
+                                <a href="" id="tombol_cari"><i class="fa fa-plus-circle fa-lg"></i></a>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-10">
+                            <div class="col-10" id="list_teman">
                                 <!-- Tampilkan nama anggota -->
                                 <p>Daftar Anggota</p>
-                                <p id="namaAnggota"># Muhamad Iskhak <a href=""><i class="fas fa-trash"></i></a></p>
-                                <p id="namaAnggota"># Muhamad Iskhak <a href=""><i class="fas fa-trash"></i></a></p>
-                                <p id="namaAnggota"># Muhamad Iskhak <a href=""><i class="fas fa-trash"></i></a></p>
+                                <p id="namaAnggota"># Nama Anggota <a href=""><i class="fas fa-trash"></i></a></p>
+                                <p id="namaAnggota"># Nama Anggota <a href=""><i class="fas fa-trash"></i></a></p>
+                                <p id="namaAnggota"># Nama Anggota <a href=""><i class="fas fa-trash"></i></a></p>
                             </div>
                         </div>
             </div>
@@ -118,5 +118,6 @@
             $('.custom-file-label').html(fileName);
         });
     </script>
+    <script src="../assets/js/addfriend_script.js"></script>
 </body>
 </html>
