@@ -120,9 +120,10 @@
                             <p class="mt-3"> <i class="fa fa-file"></i> <?= $result['file'] ?></p>
                         </div>
                     </div>
-                    <input type="submit" class="btn btn-primary mt-5 mr-3 pt-2 pr-3 float-right" value="Edit Project" id="tombol">
+                    <input type="submit" class="btn btn-primary mt-5 mr-3 float-right" value="Simpan" id="tombol">
                     </form>
-                    <a href="dashboard.php"><button class="btn btn-primary mt-5 mr-3 pt-2 pr-3 float-right" id="tombol"><i class="fas fa-arrow-left"></i></button></a>
+                    <a href="dashboard.php"><button class="btn btn-primary mt-5 mr-1 float-right" id="tombol">proyek selesai</button></a>
+                    <a href="dashboard.php"><button class="btn btn-primary mt-5 mr-3 float-right" id="tombol"><i class="fas fa-arrow-left"></i></button></a>
             </div>
         </div>
     </div>

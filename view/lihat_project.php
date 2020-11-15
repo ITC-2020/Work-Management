@@ -89,8 +89,8 @@
                             <p class="mt-3"> <i class="fa fa-file"></i> <?= $result['file'] ?></p>
                         </div>
                     </div>
-                    <a href="edit_project.php?id_project=<?= $id ?> "><button class="btn btn-primary mt-5 mr-3 pt-2 pr-3 float-right" id="tombol">Edit Project</button></a>
-                    <a href="dashboard.php"><button class="btn btn-primary mt-5 mr-3 pt-2 pr-3 float-right" id="tombol"><i class="fas fa-arrow-left"></i></button></a>
+                    <a href="edit_project.php?id_project=<?= $id ?> "><button class="btn btn-primary mt-5 mr-3 float-right" id="tombol">Edit Project</button></a>
+                    <a href="dashboard.php"><button class="btn btn-primary mt-5 mr-3 float-right" id="tombol"><i class="fas fa-arrow-left"></i></button></a>
             </div>
         </div>
     </div>
