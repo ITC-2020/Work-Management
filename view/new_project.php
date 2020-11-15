@@ -32,6 +32,21 @@
 </head>
 
 <body style="background-color: #B1D4E0;">
+
+<?php 
+    //cek status yang dikirimkan file action
+    if(isset($_GET['status'])){
+        if($_GET['status'] == "failed"){
+            echo '<script>
+            alert("Nama dan Email sudah ada, silahkan menggunakan lainnya!");
+            </script>';
+        }else if($_GET['status'] == "project_gagal"){
+                echo '<script>
+                alert("Proyek gagal ditambahkan, silahkan periksa kembali data");
+                </script>';
+        }
+    }
+?>
     <h1 class="mt-4 mb-5 ml-5" id="workspace_font">WORKSPACE</h1>
     <div class="container mt-5" id="kotak"> 
         <h3 class="float-left mt-3 mx-2 px-1 ml-4">Project</h3>
@@ -40,30 +55,30 @@
         <div class="row mt-5 mb-5 mx-4">
             <div class="col-md-6">
                     <h5>Buat Proyek Baru</h5>
-                    <form action="action-buatproject.php" method="">
+                    <form action="../config/action-buatproject.php" method="POST">
                         <div class="row">
                             <div class="col-9 pr-0">
                                 <!-- input judul proyek -->
-                                <input class="form-control rounded-lg mt-3 mb-3" type="text" placeholder="Judul Proyek">
+                                <input class="form-control rounded-lg mt-3 mb-3" type="text" placeholder="Judul Proyek" name="title" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-9 py-2 mb-2 pr-0">
                                 <!-- input nama anggota -->
-                                <input class="form-control rounded-lg" type="text" placeholder="Anggota Tim">
+                                <input class="form-control rounded-lg" id="keyword" type="text" placeholder="Anggota Tim" name="teman">
                             </div>
                             <div class="col-2 py-2 mt-2 pl-1">
                                 <!-- gambar icon plus -->
-                                <a href="#"><i class="fa fa-plus-circle fa-lg"></i></a>
+                                <a href="" id="tombol_cari"><i class="fa fa-plus-circle fa-lg"></i></a>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-10">
+                            <div class="col-10" id="list_teman">
                                 <!-- Tampilkan nama anggota -->
                                 <p>Daftar Anggota</p>
-                                <p id="namaAnggota"># Muhamad Iskhak <a href=""><i class="fas fa-trash"></i></a></p>
-                                <p id="namaAnggota"># Muhamad Iskhak <a href=""><i class="fas fa-trash"></i></a></p>
-                                <p id="namaAnggota"># Muhamad Iskhak <a href=""><i class="fas fa-trash"></i></a></p>
+                                <p id="namaAnggota"># Nama Anggota <a href=""><i class="fas fa-trash"></i></a></p>
+                                <p id="namaAnggota"># Nama Anggota <a href=""><i class="fas fa-trash"></i></a></p>
+                                <p id="namaAnggota"># Nama Anggota <a href=""><i class="fas fa-trash"></i></a></p>
                             </div>
                         </div>
             </div>
@@ -72,13 +87,13 @@
                     <div class="row">
                         <div class="col-10">
                             <!-- input deskripsi -->
-                            <textarea name="des_proyek" id="" rows="3" class="form-control mb-2 mt-2 rounded-lg" placeholder="Deskripsi Proyek"></textarea>
+                            <textarea name="description" id="description" rows="3" class="form-control mb-2 mt-2 rounded-lg" placeholder="Deskripsi Proyek"></textarea>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-10 py-2 mb-2">
                             <!-- input tanggal -->
-                            <input type="text" class="form-control rounded-lg" id="date" placeholder="YYYY-MM-DD" name="">
+                            <input type="text" class="form-control rounded-lg" id="deadline" placeholder="YYYY-MM-DD" name="deadline">
                         </div>
                     </div>
                     <div class="row">
@@ -90,7 +105,7 @@
                             </div>
                         </div>
                     </div>
-                    <input type="submit" class="btn btn-primary mt-5 mr- 3 pt-2 pr-3 float-right" value="Buat Proyek" id="tombol">
+                    <input type="submit" class="btn btn-primary mt-5 mr- 3 pt-2 pr-3 float-right" value="Buat Proyek" id="tombol" name="submit">
                     </form>
             </div>
         </div>
@@ -103,5 +118,6 @@
             $('.custom-file-label').html(fileName);
         });
     </script>
+    <script src="../assets/js/addfriend_script.js"></script>
 </body>
 </html>

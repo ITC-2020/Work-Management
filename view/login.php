@@ -19,6 +19,12 @@
             alert("Silahkan login dengan akun yang telah dibuat.");
             </script>';
         }
+        else{
+            echo '<script>
+            alert("Login gagal, silahkan login dengan email dan password yang benar");
+            </script>';
+        }
+    
     }
     ?>
     <div id="main_content" class="container-fluid justify-content-between p-0">
