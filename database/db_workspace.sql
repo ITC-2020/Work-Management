@@ -103,7 +103,14 @@ CREATE TABLE `db_proyek` (
 --
 
 INSERT INTO `db_proyek` (`id_proyek`, `judul`, `deskripsi`, `tanggal_deadline`, `dokumen`, `status`) VALUES
-(5, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0);
+(1, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0),
+(2, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0),
+(3, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0),
+(4, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0),
+(5, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0),
+(6, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0),
+(7, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0),
+(8, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0);
 
 -- --------------------------------------------------------
 
