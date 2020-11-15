@@ -46,7 +46,15 @@ INSERT INTO `data_project` (`id_project`, `title`, `description`, `deadline`, `s
 (1, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-11-06', 'ongoing', 'draf kegiatan.txt', '1,2', 1),
 (14, 'sisdig', 'tugas 4', '2020-01-19', 'ongoing', 'light academia _ Tumblr.png', '', 3),
 (20, 'strukdat', 'blablabla', '2020-01-11', 'ongoing', 'download.png', '', 3),
-(23, 'sisdig', 'blablabla', '2020-01-19', 'ongoing', 'download.png', '', 3);
+(23, 'sisdig', 'blablabla', '2020-01-19', 'ongoing', 'download.png', '', 3),
+(2, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-11-06', 'ongoing', 'draf kegiatan.txt', '1,2', 1),
+(3, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-11-06', 'ongoing', 'draf kegiatan.txt', '1,2', 1),
+(4, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-11-06', 'ongoing', 'draf kegiatan.txt', '1,2', 1),
+(5, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-11-06', 'ongoing', 'draf kegiatan.txt', '1,2', 1),
+(6, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-11-06', 'ongoing', 'draf kegiatan.txt', '1,2', 1),
+(7, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-11-06', 'ongoing', 'draf kegiatan.txt', '1,2', 1),
+(8, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-11-06', 'ongoing', 'draf kegiatan.txt', '1,2', 1);
+
 
 -- --------------------------------------------------------
 
@@ -103,7 +111,14 @@ CREATE TABLE `db_proyek` (
 --
 
 INSERT INTO `db_proyek` (`id_proyek`, `judul`, `deskripsi`, `tanggal_deadline`, `dokumen`, `status`) VALUES
-(5, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0);
+(1, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0),
+(2, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0),
+(3, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0),
+(4, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0),
+(5, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0),
+(6, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0),
+(7, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0),
+(8, 'matematika_diskrit', 'tugas 2', '2020-10-21 21:12:10', 'yutuh', 0);
 
 -- --------------------------------------------------------
 

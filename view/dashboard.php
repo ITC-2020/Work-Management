@@ -84,7 +84,7 @@
         </div>
 
         <!-- baris untuk kotak" kecil -->
-        <div class="row mt-5 mb-5 mx-4" >
+        <div class="row mt-3 mb-5 ml-4" >
         <?php 
             //memanggil file koneksi
             require_once ("../config/koneksi.php");
@@ -99,7 +99,7 @@
             {
         ?>
         <!-- kotak" kecil -->
-            <div class="col-md-3 rounded-lg mx-2 py-2 shadow bg-white rounded" id="kotak_kecil">
+            <div class="col-md-3 rounded-lg mx-4 py-2 my-3  shadow bg-white" id="kotak_kecil">
                 <a href="edit_project.php?id_project=<?= $result['id_project'] ?>"><i class="fas fa-edit  float-right"></i></a>
                 <a href="lihat_project.php?id_project=<?= $result['id_project'] ?>"><i class="fas fa-eye  float-right mr-2"></i></a>
                 <a href="../config/hapus_project.php?id_project=<?= $result['id_project']?>"><i class="fas fa-trash float-right mr-2"></i></a>
