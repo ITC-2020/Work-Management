@@ -1,9 +1,3 @@
-<?php 
-   session_start();
-   if (!isset($_SESSION['nama'])){
-       header("Location: login.php");
-   }
-?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,7 +50,7 @@
     <h1 class="mt-4 mb-5 ml-5" id="workspace_font">WORKSPACE</h1>
     <div class="container mt-5" id="kotak"> 
         <h3 class="float-left mt-3 mx-2 px-1 ml-4">Project</h3>
-        <h5 class="float-right mt-3 mx-2 px-1 mr-4">Hello, <?=$_SESSION['nama']?><i class="fas fa-user ml-1"></i></h5>
+        <h5 class="float-right mt-3 mx-2 px-1 mr-4">Hello, Iskhak!<i class="fas fa-user ml-1"></i></h5>
         <br>
         <div class="row mt-5 mb-5 mx-4">
             <div class="col-md-6">

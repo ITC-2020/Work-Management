@@ -53,9 +53,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav mx-auto">
-                    <a id="lihat_semua" class="nav-item nav-link active" href="#">Semua <span class="sr-only">(current)</span></a>
-                    <a id="lihat_proses" class="nav-item nav-link" href="#">Proses</a>
-                    <a id="lihat_selesai" class="nav-item nav-link" href="#">Selesai</a>
+                    <a class="nav-item nav-link active" href="#">Semua <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="#">Proses</a>
+                    <a class="nav-item nav-link" href="#">Selesai</a>
                 </div>
                 <h5>Hello, <?php
 
@@ -84,7 +84,7 @@
         </div>
 
         <!-- baris untuk kotak" kecil -->
-        <div class="row mt-3 mb-5 ml-4" id="lihat_project">
+        <div class="row mt-3 mb-5 ml-4" >
         <?php 
             //memanggil file koneksi
             require_once ("../config/koneksi.php");
@@ -118,7 +118,6 @@
         </div>
 
     </div>
-<script src="../assets/js/dashboard_script.js"></script>
 </body>
 
 </html>
