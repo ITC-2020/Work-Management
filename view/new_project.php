@@ -24,7 +24,7 @@
     <!-- date picker js active button -->
     <script>
         $(function () {
-            $("#date").datepicker({
+            $("#deadline").datepicker({
                 autoclose: true,
                 todayHighlight: true,
                 format: 'yyyy-mm-dd',

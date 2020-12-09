@@ -39,13 +39,13 @@ if (!isset($_SESSION['nama'])) {
 </head>
 
 <body>
-    <div class="container mt-5" style="display: flex; justify-content: space-between;">
+    <div class="container mt-4" style="display: flex; justify-content: space-between;">
         <h1 id="workspace_font">WORKSPACE</h1>
         <a class="btn btn-danger" href="../config/action-logout.php" style="height: 40px;">Logout</a>
     </div>
-    <div class="container mt-5 pb-4 mb-3 shadow" id="kotak">
+    <div class="container mt-4 pb-4 mb-3 shadow" id="kotak">
         <nav class="navbar navbar-expand-lg mt-2 mx-2">
-            <a class="navbar-brand" href="#">Projek</a>
+            <a class="navbar-brand">Projek</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
