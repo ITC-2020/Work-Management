@@ -54,7 +54,7 @@
     }
 ?>
     <h1 class="mt-4 mb-5 ml-5" id="workspace_font">WORKSPACE</h1>
-    <div class="container mt-5" id="kotak"> 
+    <div class="container mt-5 shadow" id="kotak"> 
         <h3 class="float-left mt-3 mx-2 px-1 ml-4">Project</h3>
         <h5 class="float-right mt-3 mx-2 px-1 mr-4">Hello, <?=$_SESSION['nama']?><i class="fas fa-user ml-1"></i></h5>
         <br>

@@ -28,6 +28,7 @@
         $_SESSION["login"]=true;
         $_SESSION['nama'] = $nama;
         $_SESSION['id_user'] = $id;
+        $_SESSION['alamat_email'] = $email;
         header("Location: ../view/dashboard.php");
     }
     else{

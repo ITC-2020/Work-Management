@@ -43,7 +43,7 @@ if (!isset($_SESSION['nama'])) {
         <h1 id="workspace_font">WORKSPACE</h1>
         <a class="btn btn-danger" href="../config/action-logout.php" style="height: 40px;">Logout</a>
     </div>
-    <div class="container mt-5 pb-4 mb-3" id="kotak">
+    <div class="container mt-5 pb-4 mb-3 shadow" id="kotak">
         <nav class="navbar navbar-expand-lg mt-2 mx-2">
             <a class="navbar-brand" href="#">Projek</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,15 +55,17 @@ if (!isset($_SESSION['nama'])) {
                     <a id="lihat_proses" class="nav-item nav-link" href="#">Proses</a>
                     <a id="lihat_selesai" class="nav-item nav-link" href="#">Selesai</a>
                 </div>
-                <h5>Hello, <?php
+                <div>
+                    <h5 class="hello">Hello, <?php
 
-                            // Tampilin Nama Depan
-                            // $nama = explode(" ", $_SESSION['nama']);
-                            // echo $nama[0];
-
-                            // Tampilin nama full
-                            echo $_SESSION['nama'];
-                            ?> !<i class="fas fa-user ml-2"></i></h5>
+                                // Tampilin Nama Depan
+                                // $nama = explode(" ", $_SESSION['nama']);
+                                // echo $nama[0];
+                                // Tampilin nama full
+                                echo $_SESSION['nama'];
+                                ?> !<i class="fas fa-user ml-2"></i></h5>
+                    <p class="email"><?= $_SESSION['alamat_email'] ?></p>
+                </div>
             </div>
         </nav>
 
@@ -96,7 +98,7 @@ if (!isset($_SESSION['nama'])) {
             while ($result = mysqli_fetch_assoc($data)) {
             ?>
                 <!-- kotak" kecil -->
-                <div class="col-md-3 rounded-lg mx-4 py-2 my-3  shadow bg-white" id="kotak_kecil">
+                <div class="col-md-3 rounded-lg mx-4 pb-5 pt-2 my-3  shadow bg-white" id="kotak_kecil">
                     <a href="edit_project.php?id_project=<?= $result['id_project'] ?>"><i class="fas fa-edit  float-right"></i></a>
                     <a href="lihat_project.php?id_project=<?= $result['id_project'] ?>"><i class="fas fa-eye  float-right mr-2"></i></a>
                     <a href="../config/hapus_project.php?id_project=<?= $result['id_project'] ?>"><i class="fas fa-trash float-right mr-2"></i></a>
@@ -110,23 +112,27 @@ if (!isset($_SESSION['nama'])) {
                         if ($deadline > $time_now) {
                             $time_difference = $deadline->diff($time_now)->format("%a" . " days left");
                         ?>
-                            <button class="float-left rounded-pill px-2"><?= $time_difference ?></button>
+                            <button class="deadline rounded-pill px-2 shadow"
+                            style="position: absolute; bottom: 7px; left: 5px;">
+                            <?= $time_difference ?></button>
                         <?php
                         } else {
                             $time_difference = $deadline->diff($time_now)->format("%a" . " days ago");
                         ?>
-                            <button class="float-left rounded-pill px-2" style="color: tomato;"><?= $time_difference ?></button>
+                            <button class="deadline rounded-pill px-2 shadow" 
+                            style="position: absolute; bottom: 7px; left: 5px; color:tomato;">
+                            <?= $time_difference ?></button>
                         <?php
                         }
                         ?>
-                    <i class="fas fa-user bg-white float-right"></i>
+                    <i class="fas fa-user"  style="position: absolute; bottom: 7px; right: 10px;"></i>
                 </div>
             <?php } ?>
         </div>
 
 
         <div class="d-flex align-items-end flex-column">
-            <a href="new_project.php"><button class="btn btn-primary" id="tombol" type="button">Proyek Baru</button></a>
+            <a href="new_project.php"><button class="btn btn-primary shadow" id="tombol" type="button">Proyek Baru</button></a>
         </div>
 
     </div>
