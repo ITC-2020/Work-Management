@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 06, 2020 at 01:49 PM
+-- Generation Time: Dec 09, 2020 at 06:28 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -43,18 +43,19 @@ CREATE TABLE `data_project` (
 --
 
 INSERT INTO `data_project` (`id_project`, `title`, `description`, `deadline`, `status`, `file`, `team`, `id_user`) VALUES
-(0, 'pemrograman web', 'membuat website', '2021-11-30', 'finished', '', '2,6', 3),
-(1, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-11-06', 'ongoing', 'draf kegiatan.txt', '1,2', 1),
-(20, 'struktur data', 'tugas linked list melingkar', '2020-01-11', 'ongoing', '', '', 3),
-(23, 'sistem digital', 'tugas aljabar boolean', '2020-01-31', 'ongoing', '8. Aspek Ergonomi.pptx', '', 3),
-(24, 'sisdig', 'tugas 1', '2020-01-11', 'ongoing', 'download.png', '', 5),
-(25, 'matdis', 'tugas 2', '2020-01-19', 'ongoing', 'download.png', '', 5),
-(26, 'strukdat', 'tugas 4\r\n', '2020-10-11', 'ongoing', 'download.png', '', 5),
-(30, 'praktikum web', 'membuat program php', '2021-10-10', 'finished', 'bla.jpg', '2,3', 3),
-(31, 'wimaya', 'laporan', '2020-01-19', 'finished', '8. Aspek Ergonomi.pptx', '', 3),
-(32, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-11-06', 'finished', 'draf kegiatan.txt', '1,2', 3),
-(33, 'bahasa indonesia', 'laporan membaca kritis', '2021-10-21', 'ongoing', 'Tugas 4.pptx', '', 3),
-(34, 'komputasi numerik', 'tugas 8', '2021-10-21', 'ongoing', '4851-7859-1-PB (1).pdf', '', 3);
+(0, 'pemrograman web', 'membuat website php', '2020-12-03', 'finished', '', '2,6', 3),
+(1, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-12-24', 'ongoing', 'draf kegiatan.txt', '1,2', 1),
+(20, 'struktur data', 'tugas linked list melingkar', '2020-12-16', 'ongoing', '', '1,2', 3),
+(23, 'sistem digital', 'tugas aljabar boolean', '2020-12-17', 'ongoing', '', '1,2', 3),
+(24, 'sisdig', 'tugas 1', '2020-12-14', 'ongoing', 'download.png', '1,2', 5),
+(25, 'matdis', 'tugas 2', '2020-12-20', 'ongoing', 'download.png', '1,2', 5),
+(26, 'strukdat', 'tugas 4\r\n', '2020-12-30', 'ongoing', 'download.png', '1,2', 5),
+(30, 'praktikum web', 'membuat program php', '2020-12-02', 'finished', 'bla.jpg', '2,3', 3),
+(31, 'wimaya', 'laporan makalah', '2020-11-14', 'finished', '', '1,2', 3),
+(32, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-12-04', 'finished', 'draf kegiatan.txt', '1,2', 3),
+(33, 'bahasa indonesia', 'laporan membaca kritis', '2020-11-30', 'finished', 'Tugas 4.pptx', '1,2', 3),
+(35, 'kalkulus', 'tugas integral', '2020-12-15', 'ongoing', 'Tugas 4.pptx', '1,2', 3),
+(36, 'Project ITC', 'membuat website dengan ide work management', '2020-12-10', 'ongoing', 'db_workspace.sql', '1,2', 3);
 
 -- --------------------------------------------------------
 
@@ -78,7 +79,8 @@ INSERT INTO `data_user` (`id`, `nama_lengkap`, `alamat_email`, `password`) VALUE
 (2, 'muhamad iskhak', 'iskhakmuh@gmail.com', '6590cb8139924b29d689133b86986f72'),
 (3, 'gisa', 'gisanimr1010@gmail.com', '20b5228e7c555c54c7f0991828f0752c'),
 (4, 'gisagisa', 'gisanimr10@gmail.com', 'blabla'),
-(5, 'arif', 'arif@yahoo.com', 'ecab8f3fef93c06582df3049f8937c08');
+(5, 'arif', 'arif@yahoo.com', 'ecab8f3fef93c06582df3049f8937c08'),
+(6, 'arif', 'arifpribadi@gmail.com', 'd53d757c0f838ea49fb46e09cbcc3cb1');
 
 -- --------------------------------------------------------
 
@@ -198,13 +200,13 @@ ALTER TABLE `user_project`
 -- AUTO_INCREMENT for table `data_project`
 --
 ALTER TABLE `data_project`
-  MODIFY `id_project` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id_project` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT for table `data_user`
 --
 ALTER TABLE `data_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `db_pivot`

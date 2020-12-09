@@ -91,7 +91,7 @@ if (!isset($_SESSION['nama'])) {
                                 $data_team = mysqli_query($conn, $cek_data_query_team) or die(mysqli_error($conn));
                                 $result_team = mysqli_fetch_assoc($data_team);
                             ?>
-                                <p id="namaAnggota"># <?= $result_team['nama_lengkap'] ?> <a href="config/action-team.php?id=<?= $result_team['id'] ?>"><i class="fas fa-trash"></i></a></p>
+                                <p id="namaAnggota"># <?= $result_team['nama_lengkap'] ?> <a href="../config/action-team.php?user='<?=$user?>'&id_project='<?=$id?>'"><i class="fas fa-trash"></i></a></p>
                             <?php } ?>
                         </div>
                     </div>

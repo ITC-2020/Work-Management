@@ -1,25 +1,24 @@
 <?php
 
-// memulai session
-session_start();
-
 //memanggil file koneksi
 require_once("../../config/koneksi.php");
 
+// memulai session
+session_start();
 
 //mencari data yang project dari database
 $id = $_SESSION['id_user'];
-if (!isset($_GET["lihat_proses"])) {
-    $cek_data_query = "SELECT * FROM data_project WHERE id_user='$id' ORDER BY `data_project`.`deadline` DESC" ;
-} else if($_GET["lihat_proses"]=="ongoing") {
-    $lihat_proses = $_GET["lihat_proses"];
-    $cek_data_query = "SELECT * FROM data_project WHERE id_user='$id'" . "AND status = '$lihat_proses' ORDER BY `data_project`.`deadline` ASC";
-}else{
-    $lihat_proses = $_GET["lihat_proses"];
-    $cek_data_query = "SELECT * FROM data_project WHERE id_user='$id'" . "AND status = '$lihat_proses' ORDER BY `data_project`.`deadline` DESC";
-}
+$keyword = $_GET["keyword"];
 
-$data = mysqli_query($conn, $cek_data_query) or die(mysqli_error($conn));
+//mencari data yang sama dari database
+$query = "SELECT * FROM data_project 
+        WHERE id_user='$id' AND (
+        title LIKE '%$keyword%' OR
+        description LIKE '%$keyword%' OR
+        deadline LIKE '%$keyword%'
+        ) ORDER BY `data_project`.`deadline` DESC";
+
+$data = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
 //menampilkan data project
 while ($result = mysqli_fetch_assoc($data)) {
@@ -38,17 +37,11 @@ while ($result = mysqli_fetch_assoc($data)) {
 
         if ($deadline > $time_now) {
             $time_difference = $deadline->diff($time_now)->format("%a" . " days left");
-        ?>
-            <button class="float-left rounded-pill px-2"><?= $time_difference ?></button>
-        <?php
         } else {
             $time_difference = $deadline->diff($time_now)->format("%a" . " days ago");
-        ?>
-            <button class="float-left rounded-pill px-2" style="color: tomato;"><?= $time_difference ?></button>
-        <?php
         }
         ?>
-        
+        <button class="float-left rounded-pill px-2"><?= $time_difference ?></button>
         <i class="fas fa-user bg-white float-right"></i>
     </div>
 <?php } ?>
