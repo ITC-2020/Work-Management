@@ -69,16 +69,6 @@ if (!isset($_SESSION['nama'])) {
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-9 py-2 mb-2 pr-0">
-                            <!-- input nama anggota -->
-                            <input class="form-control rounded-lg" type="text" placeholder="Anggota Tim">
-                        </div>
-                        <div class="col-2 py-2 mt-2 pl-1">
-                            <!-- gambar icon plus -->
-                            <a href="#"><i class="fa fa-plus-circle fa-lg"></i></a>
-                        </div>
-                    </div>
-                    <div class="row">
                         <div class="col-10">
                             <!-- Tampilkan nama anggota -->
                             <p>Daftar Anggota</p>
@@ -122,6 +112,7 @@ if (!isset($_SESSION['nama'])) {
                 </div>
                 <input name = "simpan" type="submit" class="btn btn-primary mt-5 mr-3 float-right" value="Simpan" id="tombol">
                 </form>
+                <a href="../view/edit_teams.php?id_project=<?= $id ?>"><button class="btn btn-primary mt-5 mr-1 float-right" id="tombol">Edit teams</button></a>
                 <a href="../config/action-updatestatus.php?id_project='<?=$id?>'"><button class="btn btn-primary mt-5 mr-1 float-right" id="tombol">proyek selesai</button></a>
                 <a href="dashboard.php"><button class="btn btn-primary mt-5 mr-3 float-right" id="tombol"><i class="fas fa-arrow-left"></i></button></a>
             </div>
