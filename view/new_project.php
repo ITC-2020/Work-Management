@@ -60,36 +60,23 @@
         <br>
         <div class="row mt-5 mb-5 mx-4">
             <div class="col-md-6">
-                    <h5>Buat Proyek Baru</h5>
-                    <form action="../config/action-buatproject.php" method="POST">
-                        <div class="row">
-                            <div class="col-9 pr-0">
-                                <!-- input judul proyek -->
-                                <input class="form-control rounded-lg mt-3 mb-3" type="text" placeholder="Judul Proyek" name="title" required>
-                            </div>
+                    <h5 class="mb-3">Buat Proyek Baru</h5>
+                    <form action="../config/action-buatproject.php" method="POST">                        
+                     <div class="row">
+                         <div class="col-10">
+                            <!-- gambar-->
+                            <img src="../assets/images/buat_proyek _baru.jpg" class="rounded-lg img-fluid">
                         </div>
-                        <div class="row">
-                            <div class="col-9 py-2 mb-2 pr-0">
-                                <!-- input nama anggota -->
-                                <input class="form-control rounded-lg" id="keyword" type="text" placeholder="Anggota Tim" name="teman">
-                            </div>
-                            <div class="col-2 py-2 mt-2 pl-1">
-                                <!-- gambar icon plus -->
-                                <a href="" id="tombol_cari"><i class="fa fa-plus-circle fa-lg"></i></a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-10" id="list_teman">
-                                <!-- Tampilkan nama anggota -->
-                                <p>Daftar Anggota</p>
-                                <p id="namaAnggota"># Nama Anggota <a href=""><i class="fas fa-trash"></i></a></p>
-                                <p id="namaAnggota"># Nama Anggota <a href=""><i class="fas fa-trash"></i></a></p>
-                                <p id="namaAnggota"># Nama Anggota <a href=""><i class="fas fa-trash"></i></a></p>
-                            </div>
-                        </div>
+                    </div>
             </div>
 
             <div class="col-md-6 mt-4">
+                    <div class="row">
+                            <div class="col-10">
+                                <!-- input judul proyek -->
+                                <input class="form-control rounded-lg mt-3 mb-3" type="text" placeholder="Judul Proyek" name="title" required>
+                            </div>
+                    </div>
                     <div class="row">
                         <div class="col-10">
                             <!-- input deskripsi -->
@@ -111,7 +98,7 @@
                             </div>
                         </div>
                     </div>
-                    <input type="submit" class="btn btn-primary mt-5 mr- 3 float-right" value="Buat Proyek" id="tombol" name="submit">
+                    <input type="submit" class="btn btn-primary mt-5 mr- 3 float-right" value="Lanjut" id="tombol" name="submit">
                     </form>
                     <a href="dashboard.php"><button class="btn btn-primary mt-5 mr-3 float-right" id="tombol"><i class="fas fa-arrow-left"></i></button></a>
             </div>

@@ -98,7 +98,7 @@ if (!isset($_SESSION['nama'])) {
             while ($result = mysqli_fetch_assoc($data)) {
             ?>
                 <!-- kotak" kecil -->
-                <div class="col-md-3 rounded-lg mx-4 pb-5 pt-2 my-3  shadow bg-white" id="kotak_kecil">
+                <div class="col-md-3 rounded-lg mx-4 pb-5 pt-2 my-3 shadow bg-white" id="kotak_kecil">
                     <a href="edit_project.php?id_project=<?= $result['id_project'] ?>"><i class="fas fa-edit  float-right"></i></a>
                     <a href="lihat_project.php?id_project=<?= $result['id_project'] ?>"><i class="fas fa-eye  float-right mr-2"></i></a>
                     <a href="../config/hapus_project.php?id_project=<?= $result['id_project'] ?>"><i class="fas fa-trash float-right mr-2"></i></a>
