@@ -116,7 +116,9 @@ if (!isset($_SESSION['nama'])) {
                 </div>
                 <input name = "simpan" type="submit" class="btn btn-primary mt-5 mr-3 float-right" value="simpan dan lanjut" id="tombol">
                 </form>
+
                 <a href="../config/action-updatestatus.php?id_project='<?=$id_project?>'"><button class="btn btn-primary mt-5 mr-1 float-right" id="tombol">proyek selesai</button></a>
+
                 <a href="dashboard.php"><button class="btn btn-primary mt-5 mr-3 float-right" id="tombol"><i class="fas fa-arrow-left"></i></button></a>
             </div>
         </div>

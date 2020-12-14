@@ -60,10 +60,12 @@ if (!isset($_SESSION['nama'])) {
         <br>
         <div class="row mt-5 mb-5 mx-4">
             <div class="col-md-6">
+
                 <h5 class="mb-3">Buat Proyek Baru</h5>
                 <form action="../config/action-buatproject.php" method="POST">
                     <div class="row">
                         <div class="col-10">
+
                             <!-- gambar-->
                             <img src="../assets/images/buat_proyek _baru.jpg" class="rounded-lg img-fluid">
                         </div>
@@ -71,6 +73,7 @@ if (!isset($_SESSION['nama'])) {
             </div>
 
             <div class="col-md-6 mt-4">
+
                 <div class="row">
                     <div class="col-10">
                         <!-- input judul proyek -->
@@ -97,10 +100,12 @@ if (!isset($_SESSION['nama'])) {
                             <label class="custom-file-label" for="file">Unggah Document</label>
                         </div>
                     </div>
+
                 </div>
                 <input type="submit" class="btn btn-primary mt-5 mr- 3 float-right" value="Buat Proyek" id="tombol" name="submit">
                 </form>
                 <a href="dashboard.php"><button class="btn btn-primary mt-5 mr-3 float-right" id="tombol"><i class="fas fa-arrow-left"></i></button></a>            
+
             </div>
         </div>
     </div>
