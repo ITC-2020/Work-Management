@@ -3,6 +3,13 @@ session_start();
 if (!isset($_SESSION['nama'])) {
     header("Location: login.php");
 }
+$id_project = $_GET["id_project"];
+if (isset($_GET["status"])) {
+    echo
+        '<script>
+            alert("user tidak ditemukan");
+        </script>';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,24 +28,11 @@ if (!isset($_SESSION['nama'])) {
     <script src="../assets/datepicker/js/bootstrap-datepicker.min.js"></script>
     <script src="../assets/datepicker/locales/bootstrap-datepicker.id.min.js"></script>
 
-    <!-- date picker js active button -->
-    <script>
-        $(function() {
-            $("#deadline").datepicker({
-                autoclose: true,
-                todayHighlight: true,
-                format: 'yyyy-mm-dd',
-                language: 'id'
-            });
-        });
-    </script>
-
     <title>New Project Lanjut</title>
 
 </head>
 
 <body style="background-color: #B1D4E0;">
-
     <?php
     //cek status yang dikirimkan file action
     if (isset($_GET['status'])) {
@@ -60,56 +54,54 @@ if (!isset($_SESSION['nama'])) {
         <br>
         <div class="row mt-5 mb-5 mx-4">
             <div class="col-md-6">
-
-                <h5 class="mb-3">Buat Proyek Baru</h5>
-                <form action="../config/action-buatproject.php" method="POST">
+                <h5>Susun Tim</h5>
+                <form action="../config/action-addfriend.php" method="POST">
                     <div class="row">
                         <div class="col-10">
-
                             <!-- gambar-->
                             <img src="../assets/images/buat_proyek _baru.jpg" class="rounded-lg img-fluid">
                         </div>
                     </div>
             </div>
 
+            <input type="hidden" id="id_project" value=<?= $id_project ?> name="id_project"></input>
+
             <div class="col-md-6 mt-4">
+                <div class="row">
+                    <div class="col-9 pr-0">
+                        <!-- input nama anggota -->
+                        <input class="form-control rounded-lg" id="keyword" type="text" placeholder="Anggota Tim" name="keyword">
+                    </div>
+                    <div class="col-2 mt-4 pl-1">
+                        <!-- gambar ikon plus -->
+                        <button type="submit" id="tombol_cari" style="border:0;" name="submit"><i class="fa fa-plus-circle fa-lg"></i></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-9" id="list_teman">
+                        <!-- Tampilkan nama anggota -->
+                        Daftar Team 
+                        <br/>
+                    <?php
+                    //koneksi ke database
+                    require_once("../config/koneksi.php");
 
-                <div class="row">
-                    <div class="col-10">
-                        <!-- input judul proyek -->
-                        <input class="form-control rounded-lg mt-3 mb-3" type="text" placeholder="Judul Proyek" name="title" required>
+                    $query = "SELECT * FROM db_pivot p, data_user u WHERE p.id_proyek=$id_project AND p.id_user=u.id ";
+                    $data = mysqli_query($conn, $query) or die(mysqli_error($conn));
+                    while ($result = mysqli_fetch_assoc($data)) {
+                    ?>
+                        <p id="namaAnggota"># <?php echo $result["nama_lengkap"] ?> <a href="../config/action-deleteFriend.php?user=<?= $result['id'] ?>&id_project=<?= $id_project ?>"><i class="fas fa-trash"></i></a></p>
+                    <?php
+                    }
+                    ?>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-10">
-                        <!-- input deskripsi -->
-                        <textarea name="description" id="description" rows="3" class="form-control mb-2 mt-2 rounded-lg" placeholder="Deskripsi Proyek"></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-10 py-2 mb-2">
-                        <!-- input tanggal -->
-                        <input type="text" class="form-control rounded-lg" id="deadline" placeholder="YYYY-MM-DD" name="deadline">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-10">
-                        <div class="custom-file">
-                            <!-- input file -->
-                            <input type="file" class="custom-file-input " name="file" id="file">
-                            <label class="custom-file-label" for="file">Unggah Document</label>
-                        </div>
-                    </div>
-
-                </div>
-                <input type="submit" class="btn btn-primary mt-5 mr- 3 float-right" value="Buat Proyek" id="tombol" name="submit">
+                <!-- <input type="submit" class="btn btn-primary mt-5 mr- 3 float-right" value="Buat Proyek" id="tombol" name="submit"> -->
                 </form>
-                <a href="dashboard.php"><button class="btn btn-primary mt-5 mr-3 float-right" id="tombol"><i class="fas fa-arrow-left"></i></button></a>            
-
+                <a href="./dashboard.php" class="btn btn-primary mt-5 mr-1 float-right" id="tombol" name="submit">Selesai</a>
             </div>
         </div>
     </div>
-
     <!-- js for upload input file label -->
     <script type="application/javascript">
         $('input[type="file"]').change(function(e) {
@@ -117,5 +109,7 @@ if (!isset($_SESSION['nama'])) {
             $('.custom-file-label').html(fileName);
         });
     </script>
+    <!-- <script src="../assets/js/Friend_script.js"></script> -->
 </body>
+
 </html>

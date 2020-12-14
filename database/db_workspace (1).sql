@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 09, 2020 at 06:28 AM
+-- Generation Time: Dec 14, 2020 at 05:10 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -34,7 +34,6 @@ CREATE TABLE `data_project` (
   `deadline` date NOT NULL,
   `status` varchar(100) NOT NULL,
   `file` varchar(100) NOT NULL,
-  `team` varchar(100) NOT NULL,
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -42,20 +41,22 @@ CREATE TABLE `data_project` (
 -- Dumping data for table `data_project`
 --
 
-INSERT INTO `data_project` (`id_project`, `title`, `description`, `deadline`, `status`, `file`, `team`, `id_user`) VALUES
-(0, 'pemrograman web', 'membuat website php', '2020-12-03', 'finished', '', '2,6', 3),
-(1, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-12-24', 'ongoing', 'draf kegiatan.txt', '1,2', 1),
-(20, 'struktur data', 'tugas linked list melingkar', '2020-12-16', 'ongoing', '', '1,2', 3),
-(23, 'sistem digital', 'tugas aljabar boolean', '2020-12-17', 'ongoing', '', '1,2', 3),
-(24, 'sisdig', 'tugas 1', '2020-12-14', 'ongoing', 'download.png', '1,2', 5),
-(25, 'matdis', 'tugas 2', '2020-12-20', 'ongoing', 'download.png', '1,2', 5),
-(26, 'strukdat', 'tugas 4\r\n', '2020-12-30', 'ongoing', 'download.png', '1,2', 5),
-(30, 'praktikum web', 'membuat program php', '2020-12-02', 'finished', 'bla.jpg', '2,3', 3),
-(31, 'wimaya', 'laporan makalah', '2020-11-14', 'finished', '', '1,2', 3),
-(32, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-12-04', 'finished', 'draf kegiatan.txt', '1,2', 3),
-(33, 'bahasa indonesia', 'laporan membaca kritis', '2020-11-30', 'finished', 'Tugas 4.pptx', '1,2', 3),
-(35, 'kalkulus', 'tugas integral', '2020-12-15', 'ongoing', 'Tugas 4.pptx', '1,2', 3),
-(36, 'Project ITC', 'membuat website dengan ide work management', '2020-12-10', 'ongoing', 'db_workspace.sql', '1,2', 3);
+INSERT INTO `data_project` (`id_project`, `title`, `description`, `deadline`, `status`, `file`, `id_user`) VALUES
+(1, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-12-24', 'ongoing', 'draf kegiatan.txt', 1),
+(20, 'struktur data', 'tugas linked list array', '2020-12-13', 'ongoing', '123190038_GisaniMR_D_TugasPetaKarnaugh.pdf', 3),
+(23, 'sistem digital', 'tugas aljabar boolean', '2020-12-13', 'finished', '123190038.pdf', 3),
+(24, 'sisdig', 'tugas 1', '2020-12-14', 'ongoing', 'download.png', 5),
+(25, 'matdis', 'tugas 2', '2020-12-20', 'ongoing', 'download.png', 5),
+(26, 'strukdat', 'tugas 4\r\n', '2020-12-30', 'ongoing', 'download.png', 5),
+(30, 'praktikum web', 'membuat program php', '2020-12-02', 'finished', 'bla.jpg', 3),
+(31, 'wimaya', 'laporan makalah', '2020-11-14', 'finished', '', 3),
+(32, 'Web UPNVYK', 'Membuat web upnyk yang interaktif menarik dan mudah dibaca untuk keperluan informasi baik pihak dalam maupun luar kampus', '2020-12-04', 'finished', 'draf kegiatan.txt', 3),
+(33, 'bahasa indonesia', 'laporan membaca kritis artikel jurnal', '2020-12-02', 'finished', 'Tugas 4.pptx', 3),
+(36, 'Project ITC', 'membuat website dengan ide work management', '2020-12-10', 'finished', 'db_workspace.sql', 3),
+(82, 'matematika diskrit', 'tugas matematika diskrit sebelum ujian', '2020-12-12', 'finished', 'E_123190038_GisaniMR_tugas_linkedlistArray.pdf', 3),
+(121, 'kalkulus', 'tugas integral 3', '2021-01-08', 'ongoing', '123190014_AnnasA_TugasP9.pdf', 3),
+(127, 'Workspace', 'membuat website', '2021-01-13', 'ongoing', 'Tugas kelas D.pptx', 3),
+(128, 'sisem digital', 'tugas peta karnaugh dengan maxterm', '2021-01-01', 'ongoing', '123190014_AnnasA_TugasP9.pdf', 3);
 
 -- --------------------------------------------------------
 
@@ -78,9 +79,12 @@ INSERT INTO `data_user` (`id`, `nama_lengkap`, `alamat_email`, `password`) VALUE
 (1, 'ilham', 'ilhamhehe@gmail.com', '6590cb8139924b29d689133b86986f72'),
 (2, 'muhamad iskhak', 'iskhakmuh@gmail.com', '6590cb8139924b29d689133b86986f72'),
 (3, 'gisa', 'gisanimr1010@gmail.com', '20b5228e7c555c54c7f0991828f0752c'),
-(4, 'gisagisa', 'gisanimr10@gmail.com', 'blabla'),
-(5, 'arif', 'arif@yahoo.com', 'ecab8f3fef93c06582df3049f8937c08'),
-(6, 'arif', 'arifpribadi@gmail.com', 'd53d757c0f838ea49fb46e09cbcc3cb1');
+(5, 'arif pribadi', 'arif@yahoo.com', 'ecab8f3fef93c06582df3049f8937c08'),
+(6, 'arif', 'arifpribadi@gmail.com', 'd53d757c0f838ea49fb46e09cbcc3cb1'),
+(11, 'bayu', 'bayu@gmail.com', '92360c2c392c85b23f38c188996f8d74'),
+(12, 'nabila', 'nabila@gmail.com', '9c8aaad368f10f55699450d759a72501'),
+(13, 'feri', 'feri@gmail.com', 'd25ecbc660ab7bdd1a770fdb2db15c9c'),
+(14, 'faris', 'faris@gmail.com', 'c73f227db1b523334ea3aef35bf06af8');
 
 -- --------------------------------------------------------
 
@@ -91,9 +95,78 @@ INSERT INTO `data_user` (`id`, `nama_lengkap`, `alamat_email`, `password`) VALUE
 CREATE TABLE `db_pivot` (
   `id_pivot` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
-  `id_proyek` int(11) NOT NULL,
-  `posisi` int(11) NOT NULL
+  `id_proyek` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `db_pivot`
+--
+
+INSERT INTO `db_pivot` (`id_pivot`, `id_user`, `id_proyek`) VALUES
+(21, 1, 1),
+(22, 3, 1),
+(24, 11, 20),
+(25, 5, 20),
+(27, 1, 23),
+(28, 6, 23),
+(29, 3, 23),
+(30, 4, 24),
+(31, 2, 24),
+(32, 6, 24),
+(33, 2, 25),
+(34, 5, 25),
+(35, 1, 25),
+(36, 6, 25),
+(37, 12, 26),
+(38, 13, 26),
+(39, 14, 26),
+(45, 11, 30),
+(46, 6, 30),
+(47, 1, 30),
+(48, 12, 31),
+(49, 2, 31),
+(50, 1, 31),
+(51, 13, 32),
+(52, 1, 32),
+(53, 11, 32),
+(54, 13, 33),
+(55, 14, 33),
+(56, 12, 33),
+(57, 5, 36),
+(58, 14, 36),
+(59, 1, 36),
+(60, 11, 82),
+(61, 13, 82),
+(62, 14, 82),
+(63, 2, 121),
+(74, 14, 123),
+(75, 3, 124),
+(76, 2, 124),
+(77, 5, 124),
+(79, 13, 123),
+(80, 12, 123),
+(82, 5, 125),
+(83, 13, 125),
+(84, 12, 125),
+(85, 12, 121),
+(86, 14, 121),
+(89, 12, 126),
+(90, 13, 126),
+(99, 2, 126),
+(103, 13, 127),
+(106, 11, 127),
+(107, 2, 127),
+(108, 12, 127),
+(109, 2, 128),
+(110, 12, 128),
+(111, 13, 128),
+(113, 14, 20),
+(114, 11, 33),
+(115, 5, 129),
+(116, 2, 129),
+(117, 12, 129),
+(119, 13, 130),
+(121, 11, 130);
 
 -- --------------------------------------------------------
 
@@ -170,9 +243,7 @@ ALTER TABLE `data_user`
 -- Indexes for table `db_pivot`
 --
 ALTER TABLE `db_pivot`
-  ADD PRIMARY KEY (`id_pivot`),
-  ADD KEY `id_user` (`id_user`),
-  ADD KEY `id_proyek` (`id_proyek`);
+  ADD PRIMARY KEY (`id_pivot`);
 
 --
 -- Indexes for table `db_proyek`
@@ -200,19 +271,19 @@ ALTER TABLE `user_project`
 -- AUTO_INCREMENT for table `data_project`
 --
 ALTER TABLE `data_project`
-  MODIFY `id_project` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `id_project` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
 
 --
 -- AUTO_INCREMENT for table `data_user`
 --
 ALTER TABLE `data_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `db_pivot`
 --
 ALTER TABLE `db_pivot`
-  MODIFY `id_pivot` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pivot` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=122;
 
 --
 -- AUTO_INCREMENT for table `db_proyek`
@@ -231,17 +302,6 @@ ALTER TABLE `db_user`
 --
 ALTER TABLE `user_project`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `db_pivot`
---
-ALTER TABLE `db_pivot`
-  ADD CONSTRAINT `db_pivot_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `db_user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `db_pivot_ibfk_2` FOREIGN KEY (`id_proyek`) REFERENCES `db_proyek` (`id_proyek`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

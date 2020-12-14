@@ -34,7 +34,7 @@ if (!isset($_SESSION['nama'])) {
         });
     </script>
 
-    <title>Lihat Project</title>
+    <title>Ubah Project</title>
 
 </head>
 
@@ -45,8 +45,8 @@ if (!isset($_SESSION['nama'])) {
     require_once("../config/koneksi.php");
 
     //mencari data yang project dari database
-    $id = $_GET['id_project'];
-    $cek_data_query = "SELECT * FROM data_project WHERE id_project='$id'";
+    $id_project = $_GET['id_project'];
+    $cek_data_query = "SELECT * FROM data_project WHERE id_project='$id_project'";
     $data = mysqli_query($conn, $cek_data_query) or die(mysqli_error($conn));
 
     //menjadikan result database menjadi array assosiative
@@ -61,7 +61,7 @@ if (!isset($_SESSION['nama'])) {
         <div class="row mt-5 mb-5 mx-4">
             <div class="col-md-6">
                 <h5>Ubah Proyek</h5>
-                <form action="../config/action-editproject.php?id_project='<?=$id?>'" method="POST">
+                <form action="../config/action-editproject.php?id_project='<?=$id_project?>'" method="POST">
                     <div class="row">
                         <div class="col-9 pr-0">
                             <!-- input judul proyek -->
@@ -72,16 +72,20 @@ if (!isset($_SESSION['nama'])) {
                         <div class="col-10">
                             <!-- Tampilkan nama anggota -->
                             <p>Daftar Anggota</p>
-                            <?php
-                            //dapatkan id user dr kolom tabel
-                            $idUser = explode(",", $result['team']);
-                            //mencari data yang anggota berdasar id user
-                            foreach ($idUser as $user) {
-                                $cek_data_query_team = "SELECT * FROM data_user WHERE id='$user'";
-                                $data_team = mysqli_query($conn, $cek_data_query_team) or die(mysqli_error($conn));
-                                $result_team = mysqli_fetch_assoc($data_team);
-                            ?>
-                                <p id="namaAnggota"># <?= $result_team['nama_lengkap'] ?> <a href="../config/action-team.php?user='<?=$user?>'&id_project='<?=$id?>'"><i class="fas fa-trash"></i></a></p>
+                            <?php 
+                                    //query_cari
+                                    //mendapatkan id user sebagai anggota kelompok dalam tabel pivot
+                                    $query_cari = "SELECT * FROM db_pivot WHERE id_proyek='$id_project'";
+                                    $cari = mysqli_query($conn,$query_cari);
+
+                                    //mencari data yang anggota berdasar id user
+                                    while ($data_teman = mysqli_fetch_assoc($cari)) {
+                                        $user = $data_teman['id_user'];
+                                        $cek_data_query_team = "SELECT * FROM data_user WHERE id='$user'";
+                                        $data_team = mysqli_query($conn, $cek_data_query_team) or die (mysqli_error($conn));
+                                        $result_team = mysqli_fetch_assoc($data_team);
+                                ?>
+                                <p id="namaAnggota"># <?= $result_team['nama_lengkap'] ?></i></a></p>
                             <?php } ?>
                         </div>
                     </div>
@@ -110,10 +114,11 @@ if (!isset($_SESSION['nama'])) {
                         <p class="mt-3"> <i class="fa fa-file"></i> <?= $result['file'] ?></p>
                     </div>
                 </div>
-                <input name = "simpan" type="submit" class="btn btn-primary mt-5 mr-3 float-right" value="Simpan" id="tombol">
+                <input name = "simpan" type="submit" class="btn btn-primary mt-5 mr-3 float-right" value="simpan dan lanjut" id="tombol">
                 </form>
-                <a href="../view/edit_teams.php?id_project=<?= $id ?>"><button class="btn btn-primary mt-5 mr-1 float-right" id="tombol">Edit teams</button></a>
-                <a href="../config/action-updatestatus.php?id_project='<?=$id?>'"><button class="btn btn-primary mt-5 mr-1 float-right" id="tombol">proyek selesai</button></a>
+
+                <a href="../config/action-updatestatus.php?id_project='<?=$id_project?>'"><button class="btn btn-primary mt-5 mr-1 float-right" id="tombol">proyek selesai</button></a>
+
                 <a href="dashboard.php"><button class="btn btn-primary mt-5 mr-3 float-right" id="tombol"><i class="fas fa-arrow-left"></i></button></a>
             </div>
         </div>

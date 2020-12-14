@@ -27,7 +27,7 @@
         //$teman=$_POST["teman"];
 
         $query = "INSERT INTO data_project VALUES
-        ('','$title','$description','$deadline','ongoing','$file','$id_user')";
+        ('','$title','$description','$deadline','ongoing','$file','','$id_user')";
 
         //query insert data
 

@@ -4,24 +4,7 @@ if (!isset($_SESSION['nama'])) {
     header("Location: login.php");
 }
 ?>
-<?php
-//cek status yang dikirimkan file action
-//if(isset($_GET['status'])){
-//    if($_GET['status'] == "hapussuccess")
-//    {
-//        echo 
-//            '<script>
-//            alert("Project berhasil di hapus");
-//            </script>';
-//    }
-//    else{
-//        echo 
-//        '<script>
-//        alert("Project gagal dihapus, silahkan coba lagi");
-//        </script>';
-//    }
-//}
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,6 +74,9 @@ if (!isset($_SESSION['nama'])) {
 
             //mencari data yang project dari database
             $id = $_SESSION['id_user'];
+            // $cek_data_query = "SELECT *
+            // FROM data_project
+            // INNER JOIN db_pivot ON db_pivot.id_user = data_project.id_user";
             $cek_data_query = "SELECT * FROM data_project WHERE id_user='$id' ORDER BY `data_project`.`deadline` DESC";
             $data = mysqli_query($conn, $cek_data_query) or die(mysqli_error($conn));
 
