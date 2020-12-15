@@ -72,16 +72,15 @@ if (isset($_GET["status"])) {
                         <!-- input nama anggota -->
                         <input class="form-control rounded-lg" id="keyword" type="text" placeholder="Anggota Tim" name="keyword">
                     </div>
-                    <div class="col-2 mt-4 pl-1">
+                    <div class="col-2 mt-2 pl-1">
                         <!-- gambar ikon plus -->
-                        <button type="submit" id="tombol_cari" style="border:0;" name="submit"><i class="fa fa-plus-circle fa-lg"></i></button>
+                        <button type="submit" id="tombol_cari" name="submit" class="rounded-circle px-0 py-0 border-0"><i class="fa fa-plus-circle fa-lg"></i></button>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mt-2">
                     <div class="col-9" id="list_teman">
                         <!-- Tampilkan nama anggota -->
-                        Daftar Team 
-                        <br/>
+                    <p>Daftar Team</p>  
                     <?php
                     //koneksi ke database
                     require_once("../config/koneksi.php");
@@ -90,13 +89,12 @@ if (isset($_GET["status"])) {
                     $data = mysqli_query($conn, $query) or die(mysqli_error($conn));
                     while ($result = mysqli_fetch_assoc($data)) {
                     ?>
-                        <p id="namaAnggota"># <?php echo $result["nama_lengkap"] ?> <a href="../config/action-deleteFriend.php?user=<?= $result['id'] ?>&id_project=<?= $id_project ?>"><i class="fas fa-trash"></i></a></p>
+                        <p id="namaAnggota" class="mb-1"># <?php echo $result["nama_lengkap"] ?> <a href="../config/action-deleteFriend.php?user=<?= $result['id'] ?>&id_project=<?= $id_project ?>"><i class="fas fa-trash"></i></a></p>
                     <?php
                     }
                     ?>
                     </div>
                 </div>
-                <!-- <input type="submit" class="btn btn-primary mt-5 mr- 3 float-right" value="Buat Proyek" id="tombol" name="submit"> -->
                 </form>
                 <a href="./dashboard.php" class="btn btn-primary mt-5 mr-1 float-right" id="tombol" name="submit">Selesai</a>
             </div>
