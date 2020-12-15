@@ -33,20 +33,6 @@ if (isset($_GET["status"])) {
 </head>
 
 <body style="background-color: #B1D4E0;">
-    <?php
-    //cek status yang dikirimkan file action
-    if (isset($_GET['status'])) {
-        if ($_GET['status'] == "failed") {
-            echo '<script>
-            alert("Nama dan Email sudah ada, silahkan menggunakan lainnya!");
-            </script>';
-        } else if ($_GET['status'] == "project_gagal") {
-            echo '<script>
-                alert("Proyek gagal ditambahkan, silahkan periksa kembali data");
-                </script>';
-        }
-    }
-    ?>
     <h1 class="mt-4 mb-5 ml-5" id="workspace_font">WORKSPACE</h1>
     <div class="container mt-5 shadow" id="kotak">
         <h3 class="float-left mt-3 mx-2 px-1 ml-4">Project</h3>
